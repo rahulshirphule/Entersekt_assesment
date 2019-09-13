@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct Cities: Decodable {
+public struct Cities: Decodable {
     var id: String
     var name: String
     var malls: Malls
 }
 
-struct Malls: Decodable {
+public struct Malls: Decodable {
     var id: String
     var name: String
     var shops: Shops
 }
 
-struct Shops: Decodable {
+public struct Shops: Decodable {
     var id: String
     var name: String
 }
