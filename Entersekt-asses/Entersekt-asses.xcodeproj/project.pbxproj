@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		4CBBC4B5232AA54E00EE2749 /* Entersekt_asses.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBBC4B3232AA54E00EE2749 /* Entersekt_asses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CBBC524232C2CA900EE2749 /* EntersketSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC520232C2CA900EE2749 /* EntersketSDK.swift */; };
+		4CBBC525232C2CA900EE2749 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC522232C2CA900EE2749 /* Cities.swift */; };
+		4CBBC526232C2CA900EE2749 /* BaseHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC523232C2CA900EE2749 /* BaseHttpRequest.swift */; };
+		4CBBC52E232C2CC400EE2749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC52D232C2CC400EE2749 /* AppDelegate.swift */; };
+		4CBBC530232C2CC400EE2749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC52F232C2CC400EE2749 /* ViewController.swift */; };
+		4CBBC533232C2CC400EE2749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBC531232C2CC400EE2749 /* Main.storyboard */; };
+		4CBBC535232C2CC500EE2749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBC534232C2CC500EE2749 /* Assets.xcassets */; };
+		4CBBC538232C2CC500EE2749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBC536232C2CC500EE2749 /* LaunchScreen.storyboard */; };
+		4CBBC53E232C2CD200EE2749 /* Entersekt_asses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entersekt_asses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBC4B3232AA54E00EE2749 /* Entersekt_asses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entersekt_asses.h; sourceTree = "<group>"; };
 		4CBBC4B4232AA54E00EE2749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBBC520232C2CA900EE2749 /* EntersketSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntersketSDK.swift; sourceTree = "<group>"; };
+		4CBBC522232C2CA900EE2749 /* Cities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		4CBBC523232C2CA900EE2749 /* BaseHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpRequest.swift; sourceTree = "<group>"; };
+		4CBBC52B232C2CC400EE2749 /* Entersket-ClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Entersket-ClientApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBBC52D232C2CC400EE2749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CBBC52F232C2CC400EE2749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CBBC532232C2CC400EE2749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CBBC534232C2CC500EE2749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CBBC537232C2CC500EE2749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CBBC539232C2CC500EE2749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +43,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CBBC528232C2CC400EE2749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBBC53E232C2CD200EE2749 /* Entersekt_asses.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				4CBBC4B2232AA54E00EE2749 /* Entersekt-asses */,
+				4CBBC52C232C2CC400EE2749 /* Entersket-ClientApp */,
 				4CBBC4B1232AA54E00EE2749 /* Products */,
+				4CBBC53D232C2CD200EE2749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */,
+				4CBBC52B232C2CC400EE2749 /* Entersket-ClientApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +76,41 @@
 		4CBBC4B2232AA54E00EE2749 /* Entersekt-asses */ = {
 			isa = PBXGroup;
 			children = (
+				4CBBC523232C2CA900EE2749 /* BaseHttpRequest.swift */,
+				4CBBC520232C2CA900EE2749 /* EntersketSDK.swift */,
+				4CBBC521232C2CA900EE2749 /* Models */,
 				4CBBC4B3232AA54E00EE2749 /* Entersekt_asses.h */,
 				4CBBC4B4232AA54E00EE2749 /* Info.plist */,
 			);
 			path = "Entersekt-asses";
+			sourceTree = "<group>";
+		};
+		4CBBC521232C2CA900EE2749 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBC522232C2CA900EE2749 /* Cities.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CBBC52C232C2CC400EE2749 /* Entersket-ClientApp */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBC52D232C2CC400EE2749 /* AppDelegate.swift */,
+				4CBBC52F232C2CC400EE2749 /* ViewController.swift */,
+				4CBBC531232C2CC400EE2749 /* Main.storyboard */,
+				4CBBC534232C2CC500EE2749 /* Assets.xcassets */,
+				4CBBC536232C2CC500EE2749 /* LaunchScreen.storyboard */,
+				4CBBC539232C2CC500EE2749 /* Info.plist */,
+			);
+			path = "Entersket-ClientApp";
+			sourceTree = "<group>";
+		};
+		4CBBC53D232C2CD200EE2749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +145,38 @@
 			productReference = 4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		4CBBC52A232C2CC400EE2749 /* Entersket-ClientApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CBBC53A232C2CC500EE2749 /* Build configuration list for PBXNativeTarget "Entersket-ClientApp" */;
+			buildPhases = (
+				4CBBC527232C2CC400EE2749 /* Sources */,
+				4CBBC528232C2CC400EE2749 /* Frameworks */,
+				4CBBC529232C2CC400EE2749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Entersket-ClientApp";
+			productName = "Entersket-ClientApp";
+			productReference = 4CBBC52B232C2CC400EE2749 /* Entersket-ClientApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4CBBC4A7232AA54E00EE2749 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = Entersekt;
 				TargetAttributes = {
 					4CBBC4AF232AA54E00EE2749 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					4CBBC52A232C2CC400EE2749 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -104,6 +187,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4CBBC4A6232AA54E00EE2749;
 			productRefGroup = 4CBBC4B1232AA54E00EE2749 /* Products */;
@@ -111,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				4CBBC4AF232AA54E00EE2749 /* Entersekt-asses */,
+				4CBBC52A232C2CC400EE2749 /* Entersket-ClientApp */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +208,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CBBC529232C2CC400EE2749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBBC538232C2CC500EE2749 /* LaunchScreen.storyboard in Resources */,
+				4CBBC535232C2CC500EE2749 /* Assets.xcassets in Resources */,
+				4CBBC533232C2CC400EE2749 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +225,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBBC525232C2CA900EE2749 /* Cities.swift in Sources */,
+				4CBBC524232C2CA900EE2749 /* EntersketSDK.swift in Sources */,
+				4CBBC526232C2CA900EE2749 /* BaseHttpRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBBC527232C2CC400EE2749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBBC530232C2CC400EE2749 /* ViewController.swift in Sources */,
+				4CBBC52E232C2CC400EE2749 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CBBC531232C2CC400EE2749 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CBBC532232C2CC400EE2749 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CBBC536232C2CC500EE2749 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CBBC537232C2CC500EE2749 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4CBBC4B6232AA54E00EE2749 /* Debug */ = {
@@ -257,6 +383,7 @@
 		4CBBC4B9232AA54E00EE2749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -273,6 +400,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.entersekt.assesment.rahul.Entersekt-asses";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -280,6 +409,7 @@
 		4CBBC4BA232AA54E00EE2749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -296,6 +426,45 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.entersekt.assesment.rahul.Entersekt-asses";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CBBC53B232C2CC500EE2749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Entersket-ClientApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.entersekt.assesment.rahul.Entersket-ClientApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CBBC53C232C2CC500EE2749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Entersket-ClientApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.entersekt.assesment.rahul.Entersket-ClientApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -317,6 +486,15 @@
 			buildConfigurations = (
 				4CBBC4B9232AA54E00EE2749 /* Debug */,
 				4CBBC4BA232AA54E00EE2749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CBBC53A232C2CC500EE2749 /* Build configuration list for PBXNativeTarget "Entersket-ClientApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBBC53B232C2CC500EE2749 /* Debug */,
+				4CBBC53C232C2CC500EE2749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
