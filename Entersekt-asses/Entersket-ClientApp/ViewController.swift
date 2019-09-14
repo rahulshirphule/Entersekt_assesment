@@ -14,20 +14,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+
+
+    @IBAction func btnGetListOfCities(_ sender: UIButton) {
+        
         let entersketSDK = EntersketSDK();
         entersketSDK.getListofCities{ (data)
             in
-//            let responseData = data as Cities?;
             if data != nil {
+                
+                DispatchQueue.main.async {
+                   
+                    let citiesViewController = CitiesTableViewController()
+                    citiesViewController.cities = data;
+                    self.navigationController?.pushViewController(citiesViewController, animated: true)
+                }
                 
             } else {
                 
             }
         };
-//        entersketSDK.getListofCities();
-//        print(cities.description);
+        
     }
-
-
 }
 

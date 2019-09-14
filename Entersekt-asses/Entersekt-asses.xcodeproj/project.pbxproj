@@ -19,6 +19,9 @@
 		4CBBC53E232C2CD200EE2749 /* Entersekt_asses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */; };
 		4CBBC540232C316900EE2749 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC53F232C316900EE2749 /* Reachability.swift */; };
 		4CBBC542232D316E00EE2749 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC541232D316E00EE2749 /* Common.swift */; };
+		4CBBC544232DA40500EE2749 /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */; };
+		4CBBC546232DAAEA00EE2749 /* MallsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */; };
+		4CBBC548232DAC6500EE2749 /* ShopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		4CBBC539232C2CC500EE2749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CBBC53F232C316900EE2749 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		4CBBC541232D316E00EE2749 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
+		4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallsTableViewController.swift; sourceTree = "<group>"; };
+		4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 				4CBBC534232C2CC500EE2749 /* Assets.xcassets */,
 				4CBBC536232C2CC500EE2749 /* LaunchScreen.storyboard */,
 				4CBBC539232C2CC500EE2749 /* Info.plist */,
+				4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */,
+				4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */,
+				4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */,
 			);
 			path = "Entersket-ClientApp";
 			sourceTree = "<group>";
@@ -243,8 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBBC548232DAC6500EE2749 /* ShopsTableViewController.swift in Sources */,
 				4CBBC530232C2CC400EE2749 /* ViewController.swift in Sources */,
+				4CBBC546232DAAEA00EE2749 /* MallsTableViewController.swift in Sources */,
 				4CBBC52E232C2CC400EE2749 /* AppDelegate.swift in Sources */,
+				4CBBC544232DA40500EE2749 /* CitiesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

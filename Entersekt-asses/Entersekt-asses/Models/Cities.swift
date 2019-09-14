@@ -13,18 +13,26 @@ public struct Root: Decodable {
 }
 
 public struct Cities: Decodable {
-    var id: Int
-    var name: String
+    var id: Int?
+    var name: String?
     var malls: [Malls]?
 }
 
+public struct Citys: Decodable {
+    public init() {}
+    public var id: Int?
+    public var name: String?
+}
+
 public struct Malls: Decodable {
-    var id: Int
-    var name: String
-    var shops: [Shops]?
+    public init() {}
+    public var id: Int?
+    public var name: String?
+    public var shops: [Shops]?
 }
 
 public struct Shops: Decodable {
-    var id: Int
-    var name: String
+    public init() {}
+    public var id: Int?
+    public var name: String?
 }

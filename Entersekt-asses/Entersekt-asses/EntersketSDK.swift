@@ -60,15 +60,18 @@ public class EntersketSDK {
         }
     }
     
-    public func getListofCities(_ completion: @escaping ([String]?) -> ()) {
+    public func getListofCities(_ completion: @escaping ([Citys]?) -> ()) {
         
         getData{ (data)
             in
             let responseData = data as Root?;
-            var city = [String]();
+            var city = [Citys]();
             if responseData != nil {
                 for citi in (responseData?.cities)! {
-                    city.append(citi.name);
+                    var obj = Citys();
+                    obj.id = citi.id;
+                    obj.name = citi.name;
+                    city.append(obj);
                 }
                 completion(city);
             } else {
@@ -78,12 +81,44 @@ public class EntersketSDK {
         
     }
     
-    public func getCity(cityId: String) // -> Cities {
-    {
+    public func getCity(cityName: String,_ completion: @escaping (Cities?) -> ()) {
         
+        getData{ (data)
+            in
+            let responseData = data as Root?;
+            var city = Cities();
+            if responseData != nil {
+                for citi in (responseData?.cities)! {
+                    if citi.name == cityName {
+                        city = citi;
+                    }
+                }
+                completion(city);
+            } else {
+                completion(nil);
+            }
+        };
     }
     
-    public func getListofMallsInCity(cityId: String) {
+    public func getListofMallsInCity(cityId: Int,_ completion: @escaping ([Malls]?) -> ()) {
+        
+        getData{ (data)
+            in
+            let responseData = data as Root?;
+            var malls = [Malls]();
+            if responseData != nil {
+                for citi in (responseData?.cities)! {
+                    if citi.id == cityId {
+                        for mall in (citi.malls)! {
+                            malls.append(mall);
+                        }
+                    }
+                }
+                completion(malls);
+            } else {
+                completion(nil);
+            }
+        };
         
     }
     
@@ -91,11 +126,53 @@ public class EntersketSDK {
         
     }
     
-    public func getListofShopsInMall(mallId: String) {
+    public func getListofShopsInMall(cityId: Int,mallId: Int,_ completion: @escaping ([Shops]?) -> ()) {
+        
+        getData{ (data)
+            in
+            let responseData = data as Root?;
+            var shops = [Shops]();
+            if responseData != nil {
+                for citi in (responseData?.cities)! {
+                    if citi.id == cityId {
+                        for mall in (citi.malls)! {
+                            if mall.id == mallId {
+                                for shop in (mall.shops)! {
+                                    shops.append(shop);
+                                }
+                            }
+                        }
+                    }
+                }
+                completion(shops);
+            } else {
+                completion(nil);
+            }
+        };
         
     }
     
-    public func getListofShopsInCity(cityId: String) {
+    public func getListofShopsInCity(cityId: Int,_ completion: @escaping ([Shops]?) -> ()) {
+     
+        getData{ (data)
+            in
+            let responseData = data as Root?;
+            var shops = [Shops]();
+            if responseData != nil {
+                for citi in (responseData?.cities)! {
+                    if citi.id == cityId {
+                        for mall in (citi.malls)! {
+                            for shop in (mall.shops)! {
+                                shops.append(shop);
+                            }
+                        }
+                    }
+                }
+                completion(shops);
+            } else {
+                completion(nil);
+            }
+        };
         
     }
     
