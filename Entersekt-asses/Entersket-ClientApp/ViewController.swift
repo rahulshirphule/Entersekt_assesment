@@ -15,8 +15,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let entersketSDK = EntersketSDK();
-        let cities =  entersketSDK.getListofCities();
-        print(cities.description);
+        entersketSDK.getListofCities{ (data)
+            in
+//            let responseData = data as Cities?;
+            if data != nil {
+                
+            } else {
+                
+            }
+        };
+//        entersketSDK.getListofCities();
+//        print(cities.description);
     }
 
 

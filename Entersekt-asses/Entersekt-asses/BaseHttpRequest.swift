@@ -11,13 +11,12 @@ import UIKit
 class BaseHttpRequest: NSObject {
     
     let baseUrl : String;
-    let fileName = "Cities";
     
     init(url: String) {
         baseUrl = url;
     }
     
-      func getListOfCities() {
+      func getDataFromServer(_ completion: @escaping (Root?) -> ()) {
         
         let session = URLSession.shared
         let url = URL(string: baseUrl)!
@@ -26,15 +25,24 @@ class BaseHttpRequest: NSObject {
             
             if(error != nil) {
                 print(error.debugDescription);
+                completion(nil)
             } else {
                 let json = try? JSONSerialization.jsonObject(with: data!, options: [])
                 print(json as Any);
-                self.saveCitiesDataFilesSet(fileName: self.fileName, citiesData: data as! Data)
+                self.saveCitiesDataFilesSet(fileName: EntersketCommon.fileName, citiesData: data!)
+                
+                let decoder = JSONDecoder()
+                do {
+                    let citiesResponce = try decoder.decode(Root.self, from: data!) as Root
+                    completion(citiesResponce)
+                } catch {
+                    print(error.localizedDescription)
+                    completion(nil);
+                }
+                
             }
-            
         })
         task.resume();
-
     }
     
     func getDocumentsDirectory() -> URL {
@@ -54,21 +62,5 @@ class BaseHttpRequest: NSObject {
         }
         
     }
-    
-    func retrieveFromJsonFile()  {
-        // Get the url of Persons.json in document directory
-        guard let documentsDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        let fileUrl = documentsDirectoryUrl.appendingPathComponent(fileName+".json")
-        
-        // Read data from .json file and transform data into an array
-        do {
-            let data = try Data(contentsOf: fileUrl, options: [])
-            let citiesData = try? JSONSerialization.jsonObject(with: data, options: [])
-            print(citiesData as Any);
-        } catch {
-            print(error);
-        }
-    }
-    
     
 }

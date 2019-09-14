@@ -18,6 +18,7 @@
 		4CBBC538232C2CC500EE2749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBC536232C2CC500EE2749 /* LaunchScreen.storyboard */; };
 		4CBBC53E232C2CD200EE2749 /* Entersekt_asses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBBC4B0232AA54E00EE2749 /* Entersekt_asses.framework */; };
 		4CBBC540232C316900EE2749 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC53F232C316900EE2749 /* Reachability.swift */; };
+		4CBBC542232D316E00EE2749 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC541232D316E00EE2749 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		4CBBC537232C2CC500EE2749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CBBC539232C2CC500EE2749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CBBC53F232C316900EE2749 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		4CBBC541232D316E00EE2749 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				4CBBC4B3232AA54E00EE2749 /* Entersekt_asses.h */,
 				4CBBC4B4232AA54E00EE2749 /* Info.plist */,
 				4CBBC53F232C316900EE2749 /* Reachability.swift */,
+				4CBBC541232D316E00EE2749 /* Common.swift */,
 			);
 			path = "Entersekt-asses";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				4CBBC525232C2CA900EE2749 /* Cities.swift in Sources */,
 				4CBBC524232C2CA900EE2749 /* EntersketSDK.swift in Sources */,
 				4CBBC540232C316900EE2749 /* Reachability.swift in Sources */,
+				4CBBC542232D316E00EE2749 /* Common.swift in Sources */,
 				4CBBC526232C2CA900EE2749 /* BaseHttpRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

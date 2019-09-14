@@ -8,19 +8,23 @@
 
 import Foundation
 
+public struct Root: Decodable {
+    var cities: [Cities]?;
+}
+
 public struct Cities: Decodable {
-    var id: String
+    var id: Int
     var name: String
-    var malls: Malls
+    var malls: [Malls]?
 }
 
 public struct Malls: Decodable {
-    var id: String
+    var id: Int
     var name: String
-    var shops: Shops
+    var shops: [Shops]?
 }
 
 public struct Shops: Decodable {
-    var id: String
+    var id: Int
     var name: String
 }
