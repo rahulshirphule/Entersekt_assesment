@@ -80,19 +80,6 @@ public class EntersketSDK {
     
     public func getCity(cityId: String) // -> Cities {
     {
-        getData{ (data)
-            in
-            let responseData = data as Root?;
-            var city = [String]();
-            if responseData != nil {
-                for citi in (responseData?.cities)! {
-                    city.append(citi.name);
-                }
-                completion(city);
-            } else {
-                completion(nil);
-            }
-        };
         
     }
     
