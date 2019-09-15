@@ -55,9 +55,13 @@ class MallsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        self.view.showBlurLoader();
+
         let entersketSDK = EntersketSDK();
         entersketSDK.getListofShopsInMall(cityId: cityId,mallId: malls[indexPath.row].id!, { (data)
             in
+            self.view.removeBluerLoader();
+
             if data != nil {
                 
                 DispatchQueue.main.async {

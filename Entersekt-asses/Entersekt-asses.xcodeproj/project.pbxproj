@@ -22,6 +22,9 @@
 		4CBBC544232DA40500EE2749 /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */; };
 		4CBBC546232DAAEA00EE2749 /* MallsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */; };
 		4CBBC548232DAC6500EE2749 /* ShopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */; };
+		4CBBC54B232EB14000EE2749 /* CitiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC549232EB14000EE2749 /* CitiTableViewCell.swift */; };
+		4CBBC54C232EB14000EE2749 /* CitiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBC54A232EB14000EE2749 /* CitiTableViewCell.xib */; };
+		4CBBC55F232EBDCC00EE2749 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBC55D232EBDCC00EE2749 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,10 @@
 		4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
 		4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallsTableViewController.swift; sourceTree = "<group>"; };
 		4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTableViewController.swift; sourceTree = "<group>"; };
+		4CBBC549232EB14000EE2749 /* CitiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiTableViewCell.swift; sourceTree = "<group>"; };
+		4CBBC54A232EB14000EE2749 /* CitiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiTableViewCell.xib; sourceTree = "<group>"; };
+		4CBBC55D232EBDCC00EE2749 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4CBBC55E232EBDCC00EE2749 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,7 @@
 		4CBBC52C232C2CC400EE2749 /* Entersket-ClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CBBC55C232EBDCC00EE2749 /* MBProgressHud */,
 				4CBBC52D232C2CC400EE2749 /* AppDelegate.swift */,
 				4CBBC52F232C2CC400EE2749 /* ViewController.swift */,
 				4CBBC531232C2CC400EE2749 /* Main.storyboard */,
@@ -117,6 +125,8 @@
 				4CBBC543232DA40500EE2749 /* CitiesTableViewController.swift */,
 				4CBBC545232DAAEA00EE2749 /* MallsTableViewController.swift */,
 				4CBBC547232DAC6500EE2749 /* ShopsTableViewController.swift */,
+				4CBBC549232EB14000EE2749 /* CitiTableViewCell.swift */,
+				4CBBC54A232EB14000EE2749 /* CitiTableViewCell.xib */,
 			);
 			path = "Entersket-ClientApp";
 			sourceTree = "<group>";
@@ -126,6 +136,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CBBC55C232EBDCC00EE2749 /* MBProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBC55D232EBDCC00EE2749 /* MBProgressHUD.m */,
+				4CBBC55E232EBDCC00EE2749 /* MBProgressHUD.h */,
+			);
+			path = MBProgressHud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +248,7 @@
 			files = (
 				4CBBC538232C2CC500EE2749 /* LaunchScreen.storyboard in Resources */,
 				4CBBC535232C2CC500EE2749 /* Assets.xcassets in Resources */,
+				4CBBC54C232EB14000EE2749 /* CitiTableViewCell.xib in Resources */,
 				4CBBC533232C2CC400EE2749 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBBC54B232EB14000EE2749 /* CitiTableViewCell.swift in Sources */,
 				4CBBC548232DAC6500EE2749 /* ShopsTableViewController.swift in Sources */,
 				4CBBC530232C2CC400EE2749 /* ViewController.swift in Sources */,
 				4CBBC546232DAAEA00EE2749 /* MallsTableViewController.swift in Sources */,
 				4CBBC52E232C2CC400EE2749 /* AppDelegate.swift in Sources */,
 				4CBBC544232DA40500EE2749 /* CitiesTableViewController.swift in Sources */,
+				4CBBC55F232EBDCC00EE2749 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

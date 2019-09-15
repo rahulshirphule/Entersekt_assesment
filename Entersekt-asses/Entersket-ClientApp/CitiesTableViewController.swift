@@ -22,8 +22,10 @@ class CitiesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+//        self.tableView.register(CitiesTableViewCell.self, forCellReuseIdentifier: "citiReuseIdentifier")
         
+        self.tableView.register(UINib.init(nibName: "CitiTableViewCell", bundle: nil), forCellReuseIdentifier: "citiReuseIdentifier")
+
         self.title = "Cities";
 
     }
@@ -39,30 +41,56 @@ class CitiesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return cities.count;
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 128;
+    }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "citiReuseIdentifier", for: indexPath) as! CitiesTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = cities[indexPath.row].name;
+//        cell.textLabel?.text = cities[indexPath.row].name;
+       
+        cell.lblName.text = self.cities[indexPath.row].name;
+        
+//        cell.btnGetListOfMalls.addTarget(self, action: Selector(("btnGetListOfShopsInCity:")), for: .touchUpInside)
+//        cell.btnGetListOfShopsInCity.addTarget(self, action: Selector(("btnGetListOfShopsInCity:")), for: .touchUpInside)
+
+        cell.btnGetListOfMalls.addTarget(self, action: #selector(btnGetListOfMalls), for: .touchUpInside)
+        cell.btnGetListOfShopsInCity.addTarget(self, action: #selector(btnGetListOfShopsInCityClicked), for: .touchUpInside)
+
+        cell.btnGetListOfMalls.tag = indexPath.row;
+        cell.btnGetListOfShopsInCity.tag = indexPath.row;
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    @objc func btnGetListOfShopsInCityClicked(_ sender: UIButton) {
         
+        btnGetListOfShopsInCity(index: sender.tag);
+    }
+    
+    @objc func btnGetListOfMalls(_ sender: UIButton) {
+        
+        self.view.showBlurLoader();
+
+        let index = sender.tag;
         let entersketSDK = EntersketSDK();
-        entersketSDK.getListofMallsInCity(cityId: cities[indexPath.row].id!, { (data)
+        entersketSDK.getListofMallsInCity(cityId: cities[index].id!, { (data)
             in
+            self.view.removeBluerLoader();
+
             if data != nil {
                 
                 DispatchQueue.main.async {
                     
                     let citiesViewController = MallsTableViewController()
                     citiesViewController.malls = data;
-                    citiesViewController.cityId = self.cities[indexPath.row].id!;
-                    citiesViewController.cityName = self.cities[indexPath.row].name!;
+                    citiesViewController.cityId = self.cities[index].id!;
+                    citiesViewController.cityName = self.cities[index].name!;
                     self.navigationController?.pushViewController(citiesViewController, animated: true)
                 }
                 
@@ -71,6 +99,38 @@ class CitiesTableViewController: UITableViewController {
             }
         });
         
+        
+    }
+    
+    func btnGetListOfShopsInCity(index : Int) {
+        
+        self.view.showBlurLoader();
+
+        let entersketSDK = EntersketSDK();
+        entersketSDK.getListofShopsInCity(cityId: cities[index].id!, { (data)
+            in
+            self.view.removeBluerLoader();
+            if data != nil {
+                
+                DispatchQueue.main.async {
+            
+                    let shopsViewController = ShopsTableViewController()
+                    shopsViewController.shops = data;
+                    shopsViewController.cityId = self.cities[index].id!;
+                    shopsViewController.mallName = self.cities[index].name!;
+                    self.navigationController?.pushViewController(shopsViewController, animated: true)
+                }
+                
+            } else {
+                
+            }
+        });
+        
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        btnGetListOfMalls(index: indexPath.row);
     }
  
 
