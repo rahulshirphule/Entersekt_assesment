@@ -10,35 +10,13 @@ import Foundation
 
 public class EntersketSDK {
     
-    var dataNotAvailable : Bool;
     let baseRequest : BaseHttpRequest;
     
     public init() {
         baseRequest = BaseHttpRequest(url: EntersketCommon.url);
-        dataNotAvailable = true;
-//        let baseRequest = BaseHttpRequest(url: EntersketCommon.fileName);
-//        if Reachability.isConnectedToNetwork(){
-//            dataNotAvailable = false;
-//            baseRequest.getListOfCities{ (isCityDataAvailable)
-//                in
-//                if isCityDataAvailable == true {
-//                    self.dataNotAvailable = false;
-//                }
-//            };
-//        }else{
-//            let citiesObject =  retrieveFromlocally()
-//             if  citiesObject != nil {
-//                dataNotAvailable = false;
-//            } else {
-//                dataNotAvailable = false;
-//            }
-//
-//        }
-//        retrieveFromlocally()
-
     }
     
-    public func getData(_ completion: @escaping (Root?) -> ()) {
+    func getData(_ completion: @escaping (Root?) -> ()) {
         
         if Reachability.isConnectedToNetwork(){
             baseRequest.getDataFromServer{ (data)
@@ -78,21 +56,17 @@ public class EntersketSDK {
                 completion(nil);
             }
         };
-        
     }
     
-    public func getCity(cityName: String,_ completion: @escaping (Cities?) -> ()) {
+    public func getCity(cityId: Int,_ completion: @escaping (Cities?) -> ()) {
         
         getData{ (data)
             in
             let responseData = data as Root?;
             var city = Cities();
             if responseData != nil {
-                for citi in (responseData?.cities)! {
-                    if citi.name == cityName {
-                        city = citi;
-                    }
-                }
+                let citiObject = responseData?.cities!.filter{ $0.id == cityId }.first
+                city = citiObject!;
                 completion(city);
             } else {
                 completion(nil);
@@ -107,12 +81,9 @@ public class EntersketSDK {
             let responseData = data as Root?;
             var malls = [Malls]();
             if responseData != nil {
-                for citi in (responseData?.cities)! {
-                    if citi.id == cityId {
-                        for mall in (citi.malls)! {
-                            malls.append(mall);
-                        }
-                    }
+                let citiObject = responseData?.cities!.filter{ $0.id == cityId }.first
+                for mall in (citiObject?.malls)! {
+                    malls.append(mall);
                 }
                 completion(malls);
             } else {
@@ -122,8 +93,22 @@ public class EntersketSDK {
         
     }
     
-    public func getMallInCity(citiyID: String,mallId: String) {
+    public func getShopInMall(cityId: Int,mallId: Int,shopId: Int,_ completion: @escaping (Shops?) -> ()) {
         
+        getData{ (data)
+            in
+            let responseData = data as Root?;
+            var perticularShop = Shops();
+            if responseData != nil {
+                let citiObject = responseData?.cities!.filter{ $0.id == cityId }.first
+                let mallObject = citiObject?.malls!.filter{ $0.id == mallId }.first
+                let shopObject = mallObject?.shops!.filter{ $0.id == shopId }.first
+                perticularShop = shopObject!;
+                completion(perticularShop);
+            } else {
+                completion(nil);
+            }
+        };
     }
     
     public func getListofShopsInMall(cityId: Int,mallId: Int,_ completion: @escaping ([Shops]?) -> ()) {
@@ -133,16 +118,11 @@ public class EntersketSDK {
             let responseData = data as Root?;
             var shops = [Shops]();
             if responseData != nil {
-                for citi in (responseData?.cities)! {
-                    if citi.id == cityId {
-                        for mall in (citi.malls)! {
-                            if mall.id == mallId {
-                                for shop in (mall.shops)! {
-                                    shops.append(shop);
-                                }
-                            }
-                        }
-                    }
+                let citiObject = responseData?.cities!.filter{ $0.id == cityId }.first
+                let mallObject = citiObject?.malls!.filter{ $0.id == mallId }.first
+                
+                for shop in (mallObject?.shops)! {
+                    shops.append(shop);
                 }
                 completion(shops);
             } else {
@@ -159,13 +139,10 @@ public class EntersketSDK {
             let responseData = data as Root?;
             var shops = [Shops]();
             if responseData != nil {
-                for citi in (responseData?.cities)! {
-                    if citi.id == cityId {
-                        for mall in (citi.malls)! {
-                            for shop in (mall.shops)! {
-                                shops.append(shop);
-                            }
-                        }
+                let citiObject = responseData?.cities!.filter{ $0.id == cityId }.first
+                for mall in (citiObject?.malls)! {
+                    for shop in (mall.shops)! {
+                        shops.append(shop);
                     }
                 }
                 completion(shops);
