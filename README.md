@@ -41,14 +41,15 @@ This framework have bleow methods and all these methods are async methods
 `import Entersekt_asses`
 
 `let entersketSDK = EntersketSDK();`
-        `entersketSDK.getListofCities{ (data)`
-            `in`
-            `if data != nil {`
-                 `// success`
-            `} else {`
-                `// failure`
-            `}`
-        `};`
+
+        `entersketSDK.getListofCities{ (data)
+            in
+            if data != nil {
+                 // success
+            } else {
+                // failure
+            }
+        };`
         
 # Common problems
 
