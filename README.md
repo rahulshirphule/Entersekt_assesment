@@ -32,7 +32,7 @@ func getListofShopsInCity(cityID: Int) -> will return list of shops in city.
 
 # import Entersekt_asses
 
-let entersketSDK = EntersketSDK();
+`let entersketSDK = EntersketSDK();
         entersketSDK.getListofCities{ (data)
             in
             if data != nil {
@@ -40,7 +40,7 @@ let entersketSDK = EntersketSDK();
             } else {
                 // failure
             }
-        };
+        };`
         
 # Common problems
 
