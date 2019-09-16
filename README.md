@@ -2,21 +2,21 @@
 Rahul Shirphule Assessment
 
 
-General Information
+# General Information
 
 This project is to serve with Data for Shops across the Country in South Africa.
 
 
-Technology 
+# Technology 
 
 Swift 5
 Xcode 10.3
 
-SetUP
+# SetUP
 
 add Entersekt_asses.framework in you Xcode project under linked Framework and library
 
-Development 
+# Development 
 
 This framework have bleow methods and all these methods are async methods
 
@@ -28,7 +28,9 @@ func getShopInMall(cityId: Int, mallId: Int, shopId: Int) -> will return perticu
 func getListofShopsInMall(cityID: Int, mallId: Int) -> will return list of shops in mall.
 func getListofShopsInCity(cityID: Int) -> will return list of shops in city.
 
-How to use
+# How to use
+
+# import Entersekt_asses
 
 let entersketSDK = EntersketSDK();
         entersketSDK.getListofCities{ (data)
@@ -40,7 +42,7 @@ let entersketSDK = EntersketSDK();
             }
         };
         
-Common problems
+# Common problems
 
 In as case to server with Data you need to be online atleast for first call..then after it will store the latest recoed in Json file locally.
 
